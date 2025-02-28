@@ -12,6 +12,8 @@ jobs:
         with:
           java-version: "11"
           distribution: "adopt"
+      - name: Run download script
+        run: bash download.sh
       - uses: jenkinsci/jfr-container-action@master
         with:
           command: run
