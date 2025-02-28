@@ -8,6 +8,10 @@ jobs:
       image: ghcr.io/jenkinsci/jenkinsfile-runner:latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          java-version: "11"
+      - run: mvn clean instal
       - uses: jenkinsci/jfr-container-action@master
         with:
           command: run
