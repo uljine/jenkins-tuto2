@@ -1,0 +1,6 @@
+jenkinsfile:
+  globalNodeProperties:
+    - envVars:
+        env:
+          - key: hello
+            value: world
