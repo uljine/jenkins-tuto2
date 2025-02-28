@@ -5,7 +5,7 @@ jobs:
   job-name:
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/jenkinsci/jenkinsfile-runner:master-ubuntu-20.04
+      image: ghcr.io/jenkinsci/jenkinsfile-runner:latest
     steps:
       - uses: actions/checkout@v2
       - uses: jenkinsci/jfr-container-action@master
