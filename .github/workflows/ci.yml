@@ -11,6 +11,7 @@ jobs:
       - uses: actions/setup-java@v2
         with:
           java-version: "11"
+          distribution: "adopt"
       - run: mvn clean instal
       - uses: jenkinsci/jfr-container-action@master
         with:
