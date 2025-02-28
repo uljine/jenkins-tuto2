@@ -1,6 +1,10 @@
-jenkinsfile:
-  globalNodeProperties:
-    - envVars:
-        env:
-          - key: hello
-            value: world
+tool:
+  jdk:
+    installations:
+      -name: jdk11
+      home: "~/jdk-11"
+      properties:
+        -installSource:
+          installers:
+            -adoptOpenJDKInstaller:
+              id: "jdk-11.0.14.1+1"

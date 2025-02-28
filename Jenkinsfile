@@ -1,9 +1,18 @@
 pipeline {
     agent any
+    tools {
+        maven 'maven'
+        jdk 'jdk11'
+    }
     stages {
-        stage('hello') {
+        stage('env') {
             steps {
-                sh 'echo Hello Jenkins!'
+                sh 'mvn --version'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'mvn clean install -B --no-transfer-progress'
             }
         }
     }
